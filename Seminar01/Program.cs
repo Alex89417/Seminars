@@ -15,7 +15,7 @@ Console.Write("Input a number: ");
 int num = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Your number's " + num); */
 
-/* Task 1. На вход принимаем два числа и проверяем, является ли первое число квадратом второго:
+//Task 1. На вход принимаем два числа и проверяем, является ли первое число квадратом второго:
 
 Console.Write("Input a first number: ");
 int num1 = Convert.ToInt32(Console.ReadLine());
@@ -32,7 +32,7 @@ else
 {
     Console.WriteLine("No!");
 } 
-*/
+
 
 /* Task 2. На входе принимаем положительное число (N), на выходе получаем все целые числа в промежутке от -N до N.
 
