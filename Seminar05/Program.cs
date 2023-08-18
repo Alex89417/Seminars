@@ -117,7 +117,7 @@ WriteArray(newArray);
 */
 
 
-//Task 3. Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве.:
+/* Task 3. Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве.:
 
 int[] CreateRandomArr(int size, int minValue, int maxValue)
 {
@@ -163,28 +163,69 @@ WriteArray(myArray);
 
 bool res = ProvArray(myArray, number);
 Console.WriteLine(res);
+*/
 
 
-//Task 4. Задайте одномерный массив из m случайных чисел. Найдите количество элементов массива, значения которых лежат в отрезке [a,b]:
+/* Task 4. Задайте одномерный массив из m случайных чисел. Найдите количество элементов массива, значения которых лежат в отрезке [a,b]:
 
 
+int[] CreateRandomArray(int size, int minValue, int maxValue)
+{
+    int[] array = new int[size];
+
+    for (int i = 0; i < size; i++)
+    {
+        array[i] = new Random().Next(minValue, maxValue +1);
+    }
+    return array;
+}
+
+void WriteArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+
+    }
+    Console.WriteLine();
+}
+
+int CountNumber(int[] array, int num1, int num2)
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (num1 < num2)
+        {
+            if (array[i] >= num1 && array[i] <= num2) count++;
+        }
+
+        if (num1 > num2)
+        {
+            if (array[i] <= num1 && array[i] >= num2) count++;
+        }
+    }
+    return count;
+}
 
 
+Console.Write("input size an array: ");
+int size = Convert.ToInt32(Console.ReadLine());
+Console.Write("input min value an array: ");
+int minValue = Convert.ToInt32(Console.ReadLine());
+Console.Write("input max value an array: ");
+int maxValue = Convert.ToInt32(Console.ReadLine());
 
+int[] MyArray = CreateRandomArray(size, minValue, maxValue);
 
+Console.Write("input number first: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("input number second: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
 
-
-
-
-
-
-
-
-
-
-
-
-
+WriteArray(MyArray);
+Console.WriteLine(CountNumber(MyArray, num1, num2));
+*/
 
 
 
